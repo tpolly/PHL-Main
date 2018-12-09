@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Generated with glade 3.20.0 -->
+<interface>
+  <requires lib="gtk+" version="3.20"/>
+  <object class="GtkWindow" id="window">
+    <property name="can_focus">False</property>
+    <property name="border_width">20</property>
+    <property name="window_position">center</property>
+    <property name="gravity">center</property>
+    <child>
+      <object class="GtkBox">
+        <property name="visible">True</property>
+        <property name="can_focus">False</property>
+        <property name="orientation">vertical</property>
+        <property name="spacing">10</property>
+        <child>
+          <object class="GtkLabel" id="text">
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="label" translatable="yes">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus efficitur ornare purus, non gravida leo volutpat vel. Duis fermentum, eros quis posuere ullamcorper, magna magna pretium elit, nec gravida lacus tortor sed augue. Curabitur non justo ac tellus cursus consequat sit amet id velit. Sed dignissim ante eu ligula sollicitudin aliquam. Integer dignissim tortor id enim euismod, ac vehicula purus tincidunt. Suspendisse laoreet massa in ex ultrices, ac consectetur ipsum pharetra. Maecenas volutpat eu turpis eget rhoncus. Praesent congue posuere placerat.</property>
+            <property name="wrap">True</property>
+            <property name="width_chars">60</property>
+          </object>
+          <packing>
+            <property name="expand">False</property>
+            <property name="fill">True</property>
+            <property name="position">0</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkButton" id="ok_button">
+            <property name="label" translatable="yes">Weiter</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="receives_default">True</property>
+            <property name="halign">end</property>
+            <property name="valign">end</property>
+          </object>
+          <packing>
+            <property name="expand">False</property>
+            <property name="fill">True</property>
+            <property name="position">1</property>
+          </packing>
+        </child>
+      </object>
+    </child>
+  </object>
+</interface>
