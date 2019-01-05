@@ -109,4 +109,8 @@ class RandomMorsePattern
 	def get(i)
 		return @pattern[i]
 	end
+	
+	def get_digit_for_pattern(pattern)
+		return @pattern.key(pattern)
+	end
 end

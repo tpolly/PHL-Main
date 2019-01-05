@@ -9,7 +9,7 @@ class LowDistraction < Distraction
 		end
 	end
 
-	def do_dry_run
+	def do_dry_run?
 		true
 	end
 

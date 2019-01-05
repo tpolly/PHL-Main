@@ -1,11 +1,12 @@
 class TestPatternConstruct < GtkWindowWithBuilder
-	def initialize(keys:, subset:, pattern:, length:, id:)
+	def initialize(keys:, subset:, pattern:, length:, id:, feedback_enabled: false)
 		super()
 
 		@pattern = pattern
 		@length = length
 		@keys = keys
 		@max = length * @keys.length
+		@feedback_enabled = feedback_enabled
 		
 		@window.title = "Abfragetest (#{subset})"
 
@@ -105,8 +106,10 @@ class TestPatternConstruct < GtkWindowWithBuilder
 		}
 
 		increment_progress
-		@progress_label.label = "Nächstes Muster in 1 Sekunde"
 		@repetitions = 0
+
+		user_digit = @pattern.get_digit_for_pattern(user_answer)
+		@progress_label.label = 'Ihre Eingabe: ' + (user_digit.nil? ? 'keiner Zahl zugeordnet (ungültig)' : user_digit.to_s) if @feedback_enabled
 
 		if @progress == @max
 			Thread.new do
@@ -115,9 +118,11 @@ class TestPatternConstruct < GtkWindowWithBuilder
 				@window.close
 				end
 		else
-			delete_all
 			@ok_disabled = true
 			Thread.new do
+				sleep 2 if @feedback_enabled
+				@progress_label.label = "Nächstes Muster in 1 Sekunde"
+				delete_all
 				sleep 1
 				Speaker.speak(@digits[@progress])
 				@progress_label.label = "#{@progress} von #{@max}"

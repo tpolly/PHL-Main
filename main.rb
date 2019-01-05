@@ -203,7 +203,7 @@ module Main
 			end
 
 			def explain_dry_run
-				if @distraction.do_dry_run
+				if @distraction.do_dry_run?
 					MessageBox.new(title: "Beginn Studie", text: @distraction.explain_dry_run).show
 				else
 					next_state
@@ -212,7 +212,7 @@ module Main
 			end
 
 			def dry_run(subset)
-				if @distraction.do_dry_run
+				if @distraction.do_dry_run?
 					@distraction.enable_distraction
 					Thread.new do
 						if subset == -1
@@ -245,7 +245,7 @@ module Main
 			end
 
 			def test_construct(subset)
-				TestPatternConstruct.new(keys: [*0..9], subset: subset, pattern: @pattern, length: TEST_LENGTH, id: 'construct').show
+				TestPatternConstruct.new(keys: [*0..9], subset: subset, pattern: @pattern, length: TEST_LENGTH, id: 'construct', feedback_enabled: @distraction.provide_feedback?).show
 			end
 
 			def solution

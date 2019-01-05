@@ -5,8 +5,13 @@ class Distraction
 		end
 	end
 
-	# whether this distraction task requires a dry run to test game performance without PHL
-	def do_dry_run
+	# whether this distraction task requires a dry run to test game performance without PHL. defaults to false
+	def do_dry_run?
+		false
+	end
+	
+	# whether feedback should be provided in the test. defaults to false
+	def provide_feedback?
 		false
 	end
 

@@ -5,6 +5,7 @@ class StartWindow < GtkWindowWithBuilder
 		@builder.get_object('new_participant_1').signal_connect('clicked') { Main.new_study("NoDistraction"); @window.close }
 		@builder.get_object('new_participant_2').signal_connect('clicked') { Main.new_study("LowDistraction"); @window.close }
 		@builder.get_object('new_participant_3').signal_connect('clicked') { Main.new_study("HighDistraction"); @window.close }
+		@builder.get_object('new_participant_4').signal_connect('clicked') { Main.new_study("LowDistractionWithFeedback"); @window.close }
 
 		@builder.get_object('continue').signal_connect 'clicked' do
 			dialog = Gtk::FileChooserDialog.new(title: "Datei wählen", parent: @window, action: :open, buttons: [[Gtk::Stock::OPEN, :accept], [Gtk::Stock::CANCEL, :cancel]])
