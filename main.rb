@@ -16,7 +16,7 @@ PATH = File.expand_path(File.dirname(__FILE__))
 
 Dir.glob("#{PATH}/inc/*.rb").each(&method(:require))
 Dir.glob("#{PATH}/gui/*.rb").each(&method(:require))
-Dir.glob("#{PATH}/distraction/*.rb").each(&method(:require))
+Dir.glob("#{PATH}/distraction/*.rb").sort.each(&method(:require))
 
 ARGV.each do |arg|
 	case arg

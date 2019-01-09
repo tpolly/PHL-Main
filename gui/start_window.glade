@@ -37,8 +37,8 @@ bei passivem hapischem Lernen!</property>
             <property name="homogeneous">True</property>
             <property name="layout_style">start</property>
             <child>
-              <object class="GtkButton" id="new_participant_1">
-                <property name="label" translatable="yes">Neuer Teilnehmer in Gruppe 1</property>
+              <object class="GtkButton" id="new_participant_a">
+                <property name="label" translatable="yes">Neuer Teilnehmer in Gruppe A</property>
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
                 <property name="receives_default">True</property>
@@ -50,8 +50,8 @@ bei passivem hapischem Lernen!</property>
               </packing>
             </child>
             <child>
-              <object class="GtkButton" id="new_participant_2">
-                <property name="label" translatable="yes">Neuer Teilnehmer in Gruppe 2</property>
+              <object class="GtkButton" id="new_participant_b">
+                <property name="label" translatable="yes">Neuer Teilnehmer in Gruppe B</property>
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
                 <property name="receives_default">True</property>
@@ -63,8 +63,8 @@ bei passivem hapischem Lernen!</property>
               </packing>
             </child>
             <child>
-              <object class="GtkButton" id="new_participant_3">
-                <property name="label" translatable="yes">Neuer Teilnehmer in Gruppe 3</property>
+              <object class="GtkButton" id="new_participant_c">
+                <property name="label" translatable="yes">Neuer Teilnehmer in Gruppe C</property>
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
                 <property name="receives_default">True</property>
@@ -76,8 +76,8 @@ bei passivem hapischem Lernen!</property>
               </packing>
             </child>
             <child>
-              <object class="GtkButton" id="new_participant_4">
-                <property name="label" translatable="yes">Neuer Teilnehmer in Gruppe 4</property>
+              <object class="GtkButton" id="new_participant_a_feedback">
+                <property name="label" translatable="yes">Neuer Teilnehmer in Gruppe A (mit Feedback)</property>
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
                 <property name="receives_default">True</property>
@@ -86,6 +86,19 @@ bei passivem hapischem Lernen!</property>
                 <property name="expand">True</property>
                 <property name="fill">True</property>
                 <property name="position">3</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkButton" id="new_participant_b_feedback">
+                <property name="label" translatable="yes">Neuer Teilnehmer in Gruppe B (mit Feedback)</property>
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">True</property>
+              </object>
+              <packing>
+                <property name="expand">True</property>
+                <property name="fill">True</property>
+                <property name="position">4</property>
               </packing>
             </child>
             <child>
@@ -98,7 +111,7 @@ bei passivem hapischem Lernen!</property>
               <packing>
                 <property name="expand">True</property>
                 <property name="fill">True</property>
-                <property name="position">4</property>
+                <property name="position">5</property>
               </packing>
             </child>
             <child>
@@ -111,7 +124,7 @@ bei passivem hapischem Lernen!</property>
               <packing>
                 <property name="expand">True</property>
                 <property name="fill">True</property>
-                <property name="position">5</property>
+                <property name="position">6</property>
               </packing>
             </child>
           </object>
